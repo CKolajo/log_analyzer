@@ -1,0 +1,17 @@
+====LOG ANALYSIS REPORT ====
+
+No SQL injection patterns found. 
+
+Brute Force Attempts:
+
+NO brute force activity detected.
+
+
+High Request Volumn:
+
+ 66.249.73.135 made 482 request
+ 50.16.19.13 made 113 request
+ 46.105.14.53 made 364 request
+ 209.85.238.199 made 102 request
+ 75.97.9.59 made 273 request
+ 130.237.218.86 made 357 request
