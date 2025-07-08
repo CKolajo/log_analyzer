@@ -1,0 +1,370 @@
+ * Serving Flask app 'sql_lab_web'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://104.225.129.164:5000
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 325-007-405
+65.188.191.242 - - [05/Jul/2025 04:08:15] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 30, in login
+    conn = connect()
+           ^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 16, in connect
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+65.188.191.242 - - [05/Jul/2025 04:08:15] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+65.188.191.242 - - [05/Jul/2025 04:08:15] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+65.188.191.242 - - [05/Jul/2025 04:08:15] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+65.188.191.242 - - [05/Jul/2025 04:09:58] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 04:11:34] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 30, in login
+    conn = connect()
+           ^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 16, in connect
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+65.188.191.242 - - [05/Jul/2025 04:11:34] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 04:11:34] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 04:11:34] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+52.167.144.66 - - [05/Jul/2025 04:14:46] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+104.234.115.63 - - [05/Jul/2025 04:41:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03®\x80ÅHp-×[Ñ¦vºÛz\x0fZ£±½\x0f´\x97õK\x14òùMa\x8cS;')
+104.234.115.63 - - [05/Jul/2025 04:41:08] "[31m[1m\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03®\x80ÅHp-×[Ñ¦vºÛz\x0fZ£±½\x0f´\x97õK\x14òùMa\x8cS; \x1aaùµé´²2[0m" 400 -
+104.234.115.63 - - [05/Jul/2025 04:41:27] "GET / HTTP/1.1" 200 -
+104.234.115.63 - - [05/Jul/2025 04:44:10] code 400, message Bad request version ('À\x14À')
+104.234.115.63 - - [05/Jul/2025 04:44:10] "[31m[1m\x16\x03\x01\x00ú\x01\x00\x00ö\x03\x03à\x9aatÄë\x9d£\x89\x8e=Æ¥í×]«}µ°Å²ÛBw¶Äw%\x13WÑ 4\x8c\x16®\x8aÔ{\x0fU>R\x8du¥ìÉà¥ e\x131dÀ©Îy\x8f\x1by\x09\x0e\x002À/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+198.235.24.88 - - [05/Jul/2025 06:55:56] "GET / HTTP/1.1" 200 -
+172.233.190.104 - - [05/Jul/2025 07:45:54] "GET / HTTP/1.0" 200 -
+172.233.190.104 - - [05/Jul/2025 07:45:54] code 400, message Bad request version ('RTSP/1.0')
+172.233.190.104 - - [05/Jul/2025 07:45:54] "[31m[1mOPTIONS / RTSP/1.0[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:45:59] code 400, message Bad HTTP/0.9 request type ('\x00')
+172.233.190.104 - - [05/Jul/2025 07:45:59] "[31m[1m\x00\x1e\x00\x06\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x07version\x04bind\x00\x00\x10\x00\x03[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:04] code 400, message Bad request version ('0.12\x00')
+172.233.190.104 - - [05/Jul/2025 07:46:04] "[31m[1m\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:09] code 400, message Bad request version ('GetClassName\x00\x00\x00\x02\x04\x00\x00\x00\x00\x01\x00')
+172.233.190.104 - - [05/Jul/2025 07:46:09] "[31m[1m\x00\x00\x00\x1f\x00\x00\x00\x00\x00\x00\x00\x0cGetClassName\x00\x00\x00\x02\x04\x00\x00\x00\x00\x01\x00[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:09] "OPTIONS / HTTP/1.0" 200 -
+172.233.190.104 - - [05/Jul/2025 07:46:14] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+172.233.190.104 - - [05/Jul/2025 07:46:14] "[31m[1m\x80\x00\x00(rþ\x1d\x13\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86 \x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:14] code 400, message Bad request syntax ('HELP')
+172.233.190.104 - - [05/Jul/2025 07:46:14] "[31m[1mHELP[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:14] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+172.233.190.104 - - [05/Jul/2025 07:46:14] "[31m[1m\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:14] code 400, message Bad request version ('\x00/\x00')
+172.233.190.104 - - [05/Jul/2025 07:46:14] "[31m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:15] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+172.233.190.104 - - [05/Jul/2025 07:46:15] "[31m[1m\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:20] code 400, message Bad HTTP/0.9 request type ('l\x00')
+172.233.190.104 - - [05/Jul/2025 07:46:20] "[31m[1ml\x00\x0b\x00\x00\x00\x00\x00\x00\x00\x00\x00[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:20] code 400, message Bad request version ('SIP/2.0')
+172.233.190.104 - - [05/Jul/2025 07:46:20] "[31m[1mOPTIONS sip:nm SIP/2.0[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:25] code 400, message Bad HTTP/0.9 request type ('AMQP\x00\x00')
+172.233.190.104 - - [05/Jul/2025 07:46:25] "[31m[1mAMQP\x00\x00\x09\x01[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:25] "[33mGET /devicedesc.xml HTTP/1.1[0m" 404 -
+172.233.190.104 - - [05/Jul/2025 07:46:25] code 400, message Bad request version ('\x00/\x00')
+172.233.190.104 - - [05/Jul/2025 07:46:25] "[31m[1m\x16\x03\x00\x00i\x01\x00\x00e\x03\x03U\x1c§ärandom1random2random3random4\x00\x00\x0c\x00/\x00[0m" 400 -
+172.233.190.104 - - [05/Jul/2025 07:46:35] code 400, message Bad request version ("\x8e\x80|½Þúÿ+Ñ³ÁE1Ùý\x82ãHÌ<áYb'f»Î½\x00\x9c\x13\x02\x13\x03\x13\x01\x003\x009\x005\x00/À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À\xadÀ£À\x9fÀ]ÀaÀWÀSÀ+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ\\À`ÀVÀRÀ$À(\x00k\x00jÀsÀw\x00Ä\x00ÃÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½À")
+172.233.190.104 - - [05/Jul/2025 07:46:35] "[31m[1m\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03@\x86àôü×=v½\x85Oÿ-\x02\x9c¢°ö¨gÍ\x91g\x13Añ¤ø\x162>ç \\G'\x1c\x8e\x80|½Þúÿ+Ñ³ÁE1Ùý\x82ãHÌ<áYb'f»Î½\x00\x9c\x13\x02\x13\x03\x13\x01\x003\x009\x005\x00/À,À0\x00£\x00\x9fÌ©Ì¨ÌªÀ¯À­À£À\x9fÀ]ÀaÀWÀSÀ+À/\x00¢\x00\x9eÀ®À¬À¢À\x9eÀ\\À`ÀVÀRÀ$À(\x00k\x00jÀsÀw\x00Ä\x00ÃÀ#À'\x00g\x00@ÀrÀv\x00¾\x00½À[0m" 400 -
+115.231.78.3 - - [05/Jul/2025 08:27:58] "GET / HTTP/1.1" 200 -
+115.231.78.3 - - [05/Jul/2025 08:27:59] "GET / HTTP/1.1" 200 -
+115.231.78.3 - - [05/Jul/2025 08:27:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+65.49.20.66 - - [05/Jul/2025 09:39:04] "GET / HTTP/1.1" 200 -
+65.49.20.66 - - [05/Jul/2025 09:39:18] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+3.134.148.59 - - [05/Jul/2025 13:34:38] "GET / HTTP/1.1" 200 -
+3.134.148.59 - - [05/Jul/2025 13:36:39] "GET / HTTP/1.1" 200 -
+3.134.148.59 - - [05/Jul/2025 13:37:20] code 400, message Bad request version ('À\x14À')
+3.134.148.59 - - [05/Jul/2025 13:37:20] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03Ý\x0fL\x0bÂ'Ûu\x91\x90 ÀÔJ\x81±\x99Ì\x13ÄE!\x83Võôäu;c\x88U\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+3.134.148.59 - - [05/Jul/2025 13:38:51] code 400, message Bad request syntax ('SSH-2.0-Go')
+3.134.148.59 - - [05/Jul/2025 13:38:51] "[31m[1mSSH-2.0-Go[0m" 400 -
+3.134.148.59 - - [05/Jul/2025 13:39:35] code 400, message Bad request version ('À\x14À')
+3.134.148.59 - - [05/Jul/2025 13:39:35] "[31m[1m\x16\x03\x01\x00{\x01\x00\x00w\x03\x03eÔÀ£UP!\x8bC\x11ÏJÜ\x18\x0d±\x88O>@ø\x9b\x84wþmúóVT\x09\x11\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\x09À\x14À[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:44:49] code 400, message Bad request version ('H\x98')
+65.188.191.242 - - [05/Jul/2025 16:44:49] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03'ìRlÇ\x99¡o!¬ò \x8d\x03¾Í¥EÑ>@\x9aÖ0¦aû\\Øõub ñ¾§Øg"W!v/ÙøóÕ~\x8ej\x1c\x88A\x9e\x09\x82|O8¢3\x05$W1\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06szz\x00\x00\x00#\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00+\x00\x07\x06\x1a\x1a\x03\x04\x03\x03\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x003\x04ï\x04ízz\x00\x01\x00\x11ì\x04À×W/\x9c\x82Êò1eª6\x19lË\x1d\x1d8\x8eFËm\x8eç\x8fýp\x96\x94)\x83ÅH-'%Ë>`\x9c&\x9b\x9aìã\x0eÝ2\x91\x8a9nî\x90\x8bµ(Êf H\x98[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:44:49] code 400, message Bad request version ('\x00\x02\x01\x00\x00\x1b\x00\x03\x02\x00\x02\x003\x04ï\x04í')
+65.188.191.242 - - [05/Jul/2025 16:44:49] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03¼Îð×o*\x01i\x10Á­UÞÞ0\x9dÒ\x955ÌÏÐÑÖ\x9e\x03\x179\x99c²Z ­ÿ&\x80w{ª\\T\x9d¦+Ï\x7f\x1dÛÐg\x8c{§¶²·@\x9b%ÕRBýP\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sºº\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00-\x00\x02\x01\x01\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00\x0b\x00\x02\x01\x00\x00\x1b\x00\x03\x02\x00\x02\x003\x04ï\x04í[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:44:49] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03É\x9b')
+65.188.191.242 - - [05/Jul/2025 16:44:49] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03É\x9b\x09\x9bP[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:44:50] code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sZZ\x00\x00ÿ\x01\x00\x01\x00\x00')
+65.188.191.242 - - [05/Jul/2025 16:44:50] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x039\x1b,G\x95Q\x934wâ}>\x88Ý\x95F\x11ßöÒ©\x05p[{9\x87SLþ|\x14 «ìB\x1dyNðÃÛ..\x1dijt\x84B0¤°\\\x18\x80ÿÌ¹¦Ûà\x0en\x84\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sZZ\x00\x00ÿ\x01\x00\x01\x00\x00[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:44:55] code 400, message Bad request version ('ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x1a\x1a\x00\x00\x00')
+65.188.191.242 - - [05/Jul/2025 16:44:55] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03ý\x88¶Í\x16c.\x8c¹¾XTä\x82\x0b;Ë\x94\x86v\x11X\x9d7\x13Ìþ E\x17a? \x1a<Ï,`©ÂÝN"\x81¹V\x81ä\x19Y\x9fdDsä­Øø\x0cf\x1e/¨ì\x8c\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93\x1a\x1a\x00\x00\x00[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:44:55] code 400, message Bad request version ('P÷à\xadb£\x97ûýÅ\x83Páw£\x8d\x05(ÕÞA\x95\x10ÔLÛ1\x15')
+65.188.191.242 - - [05/Jul/2025 16:44:55] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03ï$¤$t#\x9cþM\x18ÿ-þ\x17g¥¶ \x01\x86\x1c¡ f>d\x81Ú\x87\x0c¼j P÷à­b£\x97ûýÅ\x83Páw£\x8d\x05(ÕÞA\x95\x10ÔLÛ1\x15[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:44:55] code 400, message Bad request version ('\x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Szz\x00\x00\x003\x04ï\x04íjj\x00\x01\x00\x11ì\x04Àb5Ë"<>\x04Ø^\x9dã=®p§\x8d%\x9dðJ³Ä')
+65.188.191.242 - - [05/Jul/2025 16:44:55] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03HXVR\x9bì\x87ã\x0d¯ê$6f\x09ÐKf\x0b\x9c)\x85\x08MáÉj+ò\x13ñ# :4\x88Eíh¶\x14\x9fQIr@l\x85?*\x93àÖÍkáòâËLG2âÌÁ\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Szz\x00\x00\x003\x04ï\x04íjj\x00\x01\x00\x11ì\x04Àb5Ë"<>\x04Ø^\x9dã=®p§\x8d%\x9dðJ³Ä[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:44:56] code 400, message Bad request version ('\x95ì{5nOá£&j\x92ÆÁPl\x91\x10\x11')
+65.188.191.242 - - [05/Jul/2025 16:44:56] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03ü\x94\x96\x18É+Ý +û\x99Ï\x85vHgW/`¤R°\x01ã\x0c0"Í\x19o°¯ \x09K\x11 \x95ì{5nOá£&j\x92ÆÁPl\x91\x10\x11[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:45:07] "GET / HTTP/1.1" 200 -
+65.188.191.242 - - [05/Jul/2025 16:45:34] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 30, in login
+    conn = connect()
+           ^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 16, in connect
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+65.188.191.242 - - [05/Jul/2025 16:45:34] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:45:34] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:45:34] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:46:53] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 30, in login
+    conn = connect()
+           ^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 16, in connect
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+65.188.191.242 - - [05/Jul/2025 16:46:53] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:46:53] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:46:53] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:47:26] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 30, in login
+    conn = connect()
+           ^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 16, in connect
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+65.188.191.242 - - [05/Jul/2025 16:47:26] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:47:26] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:47:27] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:52:27] code 400, message Bad request version ('ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063')
+65.188.191.242 - - [05/Jul/2025 16:52:27] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03¤jÆý-Vf\x88\x146\x1e?æ/yAÏéWè[ðP\x93\x87-\x8d?´\x85R¡ \x17Þ¤\x1eÎ\x9dÅA6Z\x98\x17\x944S9ñ°\x00ÊãJýC#õ%Ü\x17/8ã\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:52:27] code 400, message Bad request version ('\x96\x88\x05C]Ï*R\x81j?4\x00\x03-')
+65.188.191.242 - - [05/Jul/2025 16:52:27] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x1e\x84#õ\x93¾\x94(ç\x15Ý\x1b´\x17£æ\x89\x9fè\x98R\x1aÿ]iÙx\x8cß\x8c\x17é \x8aÀ\x0dâI[Ò´½OÁ\x1eo@\x9bïº*ÉU2Ì³u*\x8c\x19kk,Ã\x1f\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sZZ\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00-\x00\x02\x01\x01\x003\x04ï\x04í\x8a\x8a\x00\x01\x00\x11ì\x04Àh¸C çh\x9a$\x0b\x8açLKf·\x16\x10\x00¼;f¯£\x033\x0bÁ(Û_-©\x8c\x9c³\x1b&°1z5)K²"³\x8cc TNªÚ\x06bâ[¶\x02³n©\x95Ú\x1cyW\x04m\x8dÚ¶\x8e¨gª\x0c\x89ã¬\x1e\x8f\x902{\x0bÀ¸\x85wÇDÇ(d\x1d\x86\x05Í\x13£\x82LúRsÙ\x8cçàRóÕ\x87\x81©\x88OÔÏ\x8f&\x82\x92\x8b\x00mÙ\x90\x1fÈ\x0fzç6JK¨PzÁ\x0b\x1aBö(g#ËyµL\x97)\x07\x09ÿÆ\x02/¢föt{\x90ÇVÄ¤¹\x99\x86\x909:yÓy 9Õahsu\x1e\x96\x88\x05C]Ï*R\x81j?4\x00\x03-[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:52:27] code 400, message Bad request version ('êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Szz\x00\x00\x00')
+65.188.191.242 - - [05/Jul/2025 16:52:27] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03\x81ÞU\x98u\x87\x8dÃ\x06«BT@\x95c\x0c\x92\x1d\x8fF\x84\x9c\x899mpñ´½T§¨ \x87Q\x88ôÙKEAôëëÊ\x18\x91\x12\\ONWgMéØBJ\x12!\x96#\x1bàå\x00 êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Szz\x00\x00\x00[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:52:27] code 400, message Bad request version ('ö\x81A\x8b\x003\x04ï\x04ízz\x00\x01\x00\x11ì\x04À\x91â\x97âG´a¥xIFÆpf¤X|¾Ë%®Q©\x8döÅz&¨\x11ýè\x8eÖêB¹Ø<¦|·÷\x96\x13\xad#\x9aÐ4\x07¬\x94Ç\x9fÒ\x88-Vµ\x02<©îÌ«{äµbg¢M\x06\x811Ú\x16½\x9b\x06\x8dp;º³J/j^²3\x94:kqY¨£´1Z<+MP¢\x9c.Ç\x97Aª(\x00ó\x04h\x93\x02\x95\x97¿\x10Ä\x11ÓÄRb£´,')
+65.188.191.242 - - [05/Jul/2025 16:52:27] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x03\x8b\x83 É\x8c\x86\x8e|\x162¤\x0bY#×mÒ\x93þåPcY¦\x98tåqL|Ø[ o\x07\x16e7m¥úø\x1d\x0fÂéêô\x84\x02\x87"\x02\x1f(Ú\x07Ð¦Ð\x1f\x0fãNç\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x063ÊÊ\x00\x00\x00\x1b\x00\x03\x02\x00\x02\x00\x0b\x00\x02\x01\x00þ\x0d\x00º\x00\x00\x01\x00\x01Y\x00 *\x18~-.\x01ÙÐÏï³ªÝ«ôt=;óÊ\x82Óÿ}$Ò«\x0bte$_\x00\x901¥À\x19ß\x8aÞn|ZÆáÐÃl¸¯Iìû(\x8ef,\x13Ú\x03\x82\x02\x88\x96²_\x07Ù\x9cöMGW~ô#\x94\x82Ç'\x8e\x86}\x8a\x9a*\x97\x05yLÌ\x12jò\x17W\x90ï:\x93UÓ \x18ýñAg\x1då\x07íÙà¸·Ë\x12\x9aÑRB\x05.ææü\x85Ï)2Ó(û¬\x88ÑûÓq\x1c8fM\x02\x8b\x87Ø>mh[¹!Å!q\x95­Wlh\x92\x9c%\x0d\x1dÅ\x07ÒÔÀ\x1eö\x81A\x8b\x003\x04ï\x04ízz\x00\x01\x00\x11ì\x04À\x91â\x97âG´a¥xIFÆpf¤X|¾Ë%®Q©\x8döÅz&¨\x11ýè\x8eÖêB¹Ø<¦|·÷\x96\x13­#\x9aÐ4\x07¬\x94Ç\x9fÒ\x88-Vµ\x02<©îÌ«{äµbg¢M\x06\x811Ú\x16½\x9b\x06\x8dp;º³J/j^²3\x94:kqY¨£´1Z<+MP¢\x9c.Ç\x97Aª(\x00ó\x04h\x93\x02\x95\x97¿\x10Ä\x11ÓÄRb£´,[0m" 400 -
+65.188.191.242 - - [05/Jul/2025 16:52:37] "GET / HTTP/1.1" 200 -
+65.188.191.242 - - [05/Jul/2025 16:52:49] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 30, in login
+    conn = connect()
+           ^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 16, in connect
+    return psycopg2.connect(
+           ^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.OperationalError: connection to server at "localhost" (::1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+connection to server at "localhost" (127.0.0.1), port 5432 failed: Connection refused
+	Is the server running on that host and accepting TCP/IP connections?
+
+65.188.191.242 - - [05/Jul/2025 16:52:49] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:52:50] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+65.188.191.242 - - [05/Jul/2025 16:52:50] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+40.77.167.203 - - [05/Jul/2025 16:55:11] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x01I\x01\x00\x01E\x03\x03ä&<rÑüsd\x82c®Û¾\x9aNKÃ÷\x1aÍ\x9fÜ¾Ä°y\xad`ÿ¡¸X')
+40.77.167.203 - - [05/Jul/2025 16:55:11] "[31m[1m\x16\x03\x01\x01I\x01\x00\x01E\x03\x03ä&<rÑüsd\x82c®Û¾\x9aNKÃ÷\x1aÍ\x9fÜ¾Ä°y­`ÿ¡¸X ¤m\x8dËZä4ØR=Ì\x8e\x17YR\x8cþkY¯GdÜË[0m" 400 -
+40.77.167.203 - - [05/Jul/2025 16:55:11] code 400, message Bad request syntax ('\x16\x03\x03\x00§\x01\x00\x00£\x03\x03hiXï¯\x86ö>\x138~Ð÷\x1a3\x99\xadY-9("[N\x95ÓòlË:\x96Ã\x00\x00$À,À+À0À/À$À#À(À\'À')
+40.77.167.203 - - [05/Jul/2025 16:55:11] "[31m[1m\x16\x03\x03\x00§\x01\x00\x00£\x03\x03hiXï¯\x86ö>\x138~Ð÷\x1a3\x99­Y-9("[N\x95ÓòlË:\x96Ã\x00\x00$À,À+À0À/À$À#À(À'À[0m" 400 -
+40.77.167.203 - - [05/Jul/2025 16:55:11] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x03\x00§\x01\x00\x00£\x03\x03hiXï\x01\x82\x17')
+40.77.167.203 - - [05/Jul/2025 16:55:11] "[31m[1m\x16\x03\x03\x00§\x01\x00\x00£\x03\x03hiXï\x01\x82\x17\x85É¸\x9dÖ¨#\x99\x02ncbjjf!\x19\x0eÞ"Dyî¸\x92\x00\x00$À,À+À0À/À$À#À(À'À[0m" 400 -
+40.77.167.203 - - [05/Jul/2025 16:55:12] code 400, message Bad request version ('\x00\x1a\x00\x18\x08\x04\x08\x05\x08\x06\x04\x01\x05\x01\x02\x01\x04\x03\x05\x03\x02\x03\x02\x02\x06\x01\x06\x03\x00#\x00\x00\x00')
+40.77.167.203 - - [05/Jul/2025 16:55:12] "[31m[1m\x16\x03\x01\x01#\x01\x00\x01\x1f\x03\x03¾î\x11ô¤WR4ºj=íáÁ\x84UE\x81Í\x19:\x03Î\x0f\x8dö\x07­×4êb \x90¿¬\x9d\x1d^:éù\x02Ù\x9de\x05Õù)Sï4b\x83~ÿE{à\\¢J4ñ\x00\x04\x13\x02\x13\x01\x01\x00\x00Ò\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00+\x00\x03\x02\x03\x04\x00\x0d\x00\x1a\x00\x18\x08\x04\x08\x05\x08\x06\x04\x01\x05\x01\x02\x01\x04\x03\x05\x03\x02\x03\x02\x02\x06\x01\x06\x03\x00#\x00\x00\x00[0m" 400 -
+115.231.78.3 - - [05/Jul/2025 18:50:54] "GET / HTTP/1.1" 200 -
+115.231.78.3 - - [05/Jul/2025 18:50:55] "GET / HTTP/1.1" 200 -
+115.231.78.3 - - [05/Jul/2025 18:51:20] "[33mGET /robots.txt HTTP/1.1[0m" 404 -
+147.185.132.46 - - [05/Jul/2025 21:23:00] "GET / HTTP/1.0" 200 -
+64.62.156.38 - - [06/Jul/2025 01:25:20] "GET / HTTP/1.1" 200 -
+64.62.156.38 - - [06/Jul/2025 01:25:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+65.188.191.242 - - [06/Jul/2025 03:06:17] code 400, message Bad request version ('çCöÃk\x9fW\x12ë')
+65.188.191.242 - - [06/Jul/2025 03:06:17] "[31m[1m\x16\x03\x01\x06À\x01\x00\x06¼\x03\x03|æa¨\x9cÀa\x92\x09¹³ôbAÛá\x19Ma:õ\x96üíqwú.Õ\x06\x92m (\x0c£ðº|¼ÌÉ$ñé\x14ò\x1e<Ä®««W*Æ2þÜFÞÞ:¡g\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06Sjj\x00\x00\x00\x12\x00\x00\x00+\x00\x07\x06\x9a\x9a\x03\x04\x03\x03\x00\x17\x00\x00\x00#\x00\x00\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01DÍ\x00\x05\x00\x03\x02h2\x003\x04ï\x04íjj\x00\x01\x00\x11ì\x04ÀæÜ¡/\x89\x08h\x9cÅ\x0bØAÚ\x07a\x8bøpkÌ\x8aFì\x98f¢Z`'eðë+\x15à%ÞÊEg{\x01Ü·¾%\x13-ÄüQN\\·\x92Heûh±£ô\x15PLO=z \x8c\x06#¬\x1afì{v÷ât\x1fb\x94z\x84B\x0d¥)Êü~û(y\x1cçCöÃk\x9fW\x12ë[0m" 400 -
+65.188.191.242 - - [06/Jul/2025 03:06:17] code 400, message Bad request version ('\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00#\x00\x00\x00')
+65.188.191.242 - - [06/Jul/2025 03:06:17] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\x96oÒï\x8bräªÊÎ\x868D\x87+óKt-\x83Ôôc¿e°sÙ¦dÉY @Ò\x12ü+\x90tlîÈ\x84\x80¹2â\x18S5\x0b-¦÷Õ÷\x13«Åm5®$Ó\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sêê\x00\x00ÿ\x01\x00\x01\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00+\x00\x07\x06ªª\x03\x04\x03\x03\x00\x1b\x00\x03\x02\x00\x02\x00\x0d\x00\x12\x00\x10\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00-\x00\x02\x01\x01\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00#\x00\x00\x00[0m" 400 -
+65.188.191.242 - - [06/Jul/2025 03:06:17] code 400, message Bad request version ('U\x8a\x8f"ér\x92I\x06ÄC\x86³§s?aFÒ"\x18\x8d\x03`\x9fl<\x99Ó\x135Ø}NÒ±\x070\x80\x18e<ýq(ÄÚ½}Ãl\x90ú¥¼3\x87]\x14tv\x9b\x02HÑºÓUyû¬±\x83\'¢\x97u\x91+÷\x83±Ê¸ç1Oô!Î¹\x98\x8eJÔYþB\x82TÌ\x17\x7f\x10%7\x80\x17Nà\x7f\x03ç~FÅ\x9bÀ[j\xad\x17±\x8d\x15[|\x90S\x16§\x9dÃ\x10\x89Å¬?¶*2\x15È|')
+65.188.191.242 - - [06/Jul/2025 03:06:17] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03àáVEq±+~?Aiõqi&b»ÜÂ}\x16Q\x90Ô£Ý'µéHTG ÆdÉq.NþÉ\x86u?ðâ\x89íÅ\x91\x8b¨\x88-$»\x98\x06.îìïà·\x9f\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06sªª\x00\x00ÿ\x01\x00\x01\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x003\x04ï\x04íºº\x00\x01\x00\x11ì\x04ÀqI£õ\x88¨¨\x8b¡ï ~u\x938±\x06FÙ»pCÔh·\x96\\|ZMËô\x8f¸p(KéGÄ¢z\x16ç£%\x82\x1a]\x9b¤ZëHzée\x04S)¬É)¡0B"\x91¯¥\\%ÖK¤àe\x953¡\x02ØªpÃào«\x86\x85©ôË¹´\x04ðê U\x8a\x8f"ér\x92I\x06ÄC\x86³§s?aFÒ"\x18\x8d\x03`\x9fl<\x99Ó\x135Ø}NÒ±\x070\x80\x18e<ýq(ÄÚ½}Ãl\x90ú¥¼3\x87]\x14tv\x9b\x02HÑºÓUyû¬±\x83'¢\x97u\x91+÷\x83±Ê¸ç1Oô!Î¹\x98\x8eJÔYþB\x82TÌ\x17\x7f\x10%7\x80\x17Nà\x7f\x03ç~FÅ\x9bÀ[j­\x17±\x8d\x15[|\x90S\x16§\x9dÃ\x10\x89Å¬?¶*2\x15È|[0m" 400 -
+65.188.191.242 - - [06/Jul/2025 03:06:17] code 400, message Bad request version ('\x17±\x00')
+65.188.191.242 - - [06/Jul/2025 03:06:17] "[31m[1m\x16\x03\x01\x06 \x01\x00\x06\x9c\x03\x034¦.¯1\x92¢%\x98À\x8c0ª_\x00\x8f áZ\x1c×\x15\x99gíLæ<^\x7f \x1b \x84\x19þ\x02\x88 S\x9f\\S\x10\x14\x1a{ï\x1f\x82\x19\x08ÀY\x86\x09Hc(Bß_\x0c\x17±\x00 [0m" 400 -
+65.188.191.242 - - [06/Jul/2025 03:06:17] code 400, message Bad request syntax ('\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03\xad¿\x07\x19OÿÅ@')
+65.188.191.242 - - [06/Jul/2025 03:06:17] "[31m[1m\x16\x03\x01\x06à\x01\x00\x06Ü\x03\x03­¿\x07\x19OÿÅ@[0m" 400 -
+65.188.191.242 - - [06/Jul/2025 03:06:17] code 400, message Bad request version (':Wàe\x92f\x81í\x9bº\x9eFY)e:')
+65.188.191.242 - - [06/Jul/2025 03:06:17] "[31m[1m\x16\x03\x01\x07\x00\x01\x00\x06ü\x03\x03ã> ?\x80t\x0d¢\x1c[hÿ\x10µ\x07ôç\x91\x91ªqc\x90p~\x1c<¦ä?V& º1Hõ\x1eTñZ¼»T\x0evà\x04Áê\x07léM\x01\x7fdi|ãß\x8aVGJ\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06\x93**\x00\x00\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00\x12\x00\x00\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1\x00-\x00\x02\x01\x01\x00\x17\x00\x00\x00#\x00\x00\x003\x04ï\x04íÊÊ\x00\x01\x00\x11ì\x04ÀÝy!×»!\x7f"\x842õ¨7\x8b°±\x9cjË[]|»-\x09\x0c:Wàe\x92f\x81í\x9bº\x9eFY)e:[0m" 400 -
+65.188.191.242 - - [06/Jul/2025 03:06:30] "GET / HTTP/1.1" 200 -
+65.188.191.242 - - [06/Jul/2025 03:06:45] "[35m[1mPOST / HTTP/1.1[0m" 500 -
+Traceback (most recent call last):
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1514, in wsgi_app
+    response = self.handle_exception(e)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/mylab/lib/python3.12/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/sql-injection-lab/sql_lab_web.py", line 33, in login
+    query = f"SELECT * FROM login_user WHERE username = '{username}' AND password = '{password}';"
+                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+NameError: name 'username' is not defined
+65.188.191.242 - - [06/Jul/2025 03:06:45] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+65.188.191.242 - - [06/Jul/2025 03:06:45] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+65.188.191.242 - - [06/Jul/2025 03:06:45] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+ * Detected change in '/root/sql-injection-lab/sql_lab_web.py', reloading
+ * Restarting with stat
+  File "/root/sql-injection-lab/sql_lab_web.py", line 33
+    query = f"SELECT * FROM login_user WHERE username = request.form["username"] AND password = request.form["password"];"
+                                                                      ^^^^^^^^
+SyntaxError: invalid syntax
